@@ -109,8 +109,6 @@ export async function removeUnwantedGenerators() {
 export async function addGenerator(generator) {
   const len = generators.length;
   if (len == 0) {
-    //todo: tmp: remove below
-    assert(/** @type {any} */ (generator).state.errors != null);
     await generators.push(generator);
     return;
   }
